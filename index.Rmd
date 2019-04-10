@@ -1,0 +1,51 @@
+---
+title: "gapminder-analysis"
+author: "victoria lloyd"
+date: "10 April 2019"
+output: 
+   html_document: 
+    toc: true 
+    toc_float: true
+    theme: cerulean
+    highlight: zenburn
+---
+
+### Introduction to gap minder
+
+With the Ignorance Project we identify the specific global statistical trends that have not reached a broad public audience. 
+
+```{r, chunk-label, fig.height=4}
+print("hello world")
+```
+ eval = false, print chunk but wont evaluate, eg.g when you are installing packages
+  echo = false, run the code but don't show me the code 
+  
+  # gap minder download
+  
+  install gapminder package
+  
+```{r, eval=FALSE}
+install.packages("gapminder")
+```
+  
+  also install skimr, plotly, DT
+  
+```{r, eval=FALSE}
+install.packages(c("skimr", "plotly", "DT"))
+```
+  
+  plot 
+```{r}
+library(gapminder)
+gapminder
+```
+  
+  
+```{r}
+library(ggplot2)
+p <- ggplot(gapminder, aes(x= gdpPercap, y = lifeExp, color = continent))+
+  geom_point()
+p
+```
+  
+  
