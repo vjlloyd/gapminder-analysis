@@ -20,7 +20,7 @@ print("hello world")
  eval = false, print chunk but wont evaluate, eg.g when you are installing packages
   echo = false, run the code but don't show me the code 
   
-  # gap minder download
+  # gap minder download package
   
   install gapminder package
   
@@ -46,6 +46,11 @@ library(ggplot2)
 p <- ggplot(gapminder, aes(x= gdpPercap, y = lifeExp, color = continent))+
   geom_point()
 p
+```
+  
+```{r}
+library(plotly)
+ggplotly(p)
 ```
   
   
